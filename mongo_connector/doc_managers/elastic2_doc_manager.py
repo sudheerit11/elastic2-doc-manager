@@ -207,7 +207,8 @@ class DocManager(DocManagerBase):
 
     def _index_and_mapping(self, namespace):
         """Helper method for getting the index and type from a namespace."""
-        index, doc_type = namespace.split('.', 1)
+        #index, doc_type = namespace.split('.', 1)
+        doc_type, index = namespace.split('.', 1)
         return index.lower(), doc_type
 
     def stop(self):
